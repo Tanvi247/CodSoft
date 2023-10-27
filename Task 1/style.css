@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    display:flex;
+    justify-content:space-around; 
+    align-items:center;
+    z-index: 100;
+    transition: .3s;
+    background-color: #e4d0f4;
+    color:black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: black;
+    margin-left: 35px;
+}
+
+.navigation-bar a:hover{
+    color:blueviolet;
+}
+
+section {
+    padding: 50px;
+    height: 100vh;
+    display: flex;
+    justify-content:left;
+    align-items:start;
+    text-align:center;
+}
+
+h2 span{
+    color: rgb(196, 114, 250);
+}
+
+.details{
+    margin-left: 8%;
+    margin-top: 10%;
+}
+
+.details h2{
+    font-size: 50px;
+    color: black;
+    margin-bottom:20px ;
+}
+
+.details p{
+    color:#555;
+    line-height: 22px;
+}
+
+.pics{
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    bottom: 30px;
+    right:100px;
+}
+
+.pics img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.pics:hover .img1{
+    bottom: 20px;
+}
+
+.pics:hover .img2{
+    left: 45%;
+}
+
+.links{
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.links a {    
+    padding: 20px;
+    font-size: 20px;
+    display:inline;
+    color:rgb(0, 0, 0);
+    margin-right: 30px;
+}
+
+.skills {
+    color: black;
+    font-size: 18px;
+    display: inline;
+}
+
+.skills span{
+    margin-right: 10px;
+}
+
+#skills-page {
+    color: black;
+    font-size: 48px;
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+}
+
+#skills-page div h2{
+    color: black;
+    font-size:30px;
+}
+
+.category {
+    border: 2px solid #e4d0f4;
+    height: 150px;
+    width: 1400px;
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+#projects span {
+    color: black;
+    font-size: 48px;
+    display: inline-block;
+    padding-top: 80px;    
+}
+
+#projects div h2{
+    color: black;
+    font-size:30px;
+}
+
+#resume div h2{
+    color: black;
+    font-size:30px;
+}
+
+#contact div h2{
+    color: black;
+    font-size:30px;
+}
+
+.image-item {
+    position: relative;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: transform 0.3s;
+    font-size: small;
+    display: flex;
+    flex-direction: column; 
+}
+
+#projects img {
+    height: 300px;
+    width:420px;
+}
+
+.image-text {
+    position: absolute;
+    left: 0%;
+    top: 100%; 
+    background: #e9e1ef;
+    font-size: 15px;
+    transform: translateX(-50%);
+    color: black;
+    width: 370px;
+    height: 150px;
+    display: none;
+    padding: 30px;
+    transition: all 0.5s;
+}
+
+.image-item:hover {
+    transform: translateY(-100px);
+}
+
+.image-item:hover .image-text {
+    display: block;
+    transform: translateY(50px);
+}
+
+#resume{
+    color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.test{
+    padding:150px;
+}
+
+#contact    {
+    color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer {
+    margin:0 50px;
+    position: relative;
+    background: linear-gradient(#230c74,#91f2e8,#a945d0);    
+}
+
+.tab{
+    height:70px;
+    width: 220px;
+    border-radius: 50px; 
+}
+
+.outer button, .outer span{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+.outer button{
+    background:white;
+    color: black;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    z-index: 9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.outer button a{
+    text-decoration: none;
+}
+
+.tab button{
+    height: 60px;
+    width:210px;
+    border-radius: 50px;
+}
+
+.outer span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+
+.tab span{
+    border-radius: 50px ;
+}
+
+.outer:hover span:nth-child(1){
+    filter: blur(7px);
+}
+
+.outer:hover span:nth-child(2){
+    filter: blur(14px);
+}
+
+.outer:hover{
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        filter:hue-rotate(0deg)
+    }
+    100%{
+        filter:hue-rotate(360deg)
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    width: 100%;
+    height: 550px;
+    max-width: 820px;
+    background: #ebe0f5;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    grid-template-columns: repeat(2,1fr);
+    display: grid;
+}
+
+.submit-form{
+    background:  rgb(190, 177, 246);
+    
+}
+
+.first-text{
+    text-align: center;
+    color: black;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 35px;
+}
+
+.image{
+    height: 275px;
+    width: 400px;
+}
+
+.third-text{
+    font-size: 25px;
+    position: relative;
+    color:white
+}
+
+form{
+    padding: 0 50px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.input-box{
+    height: 40px;
+    width: 70%;
+    margin:20px 0;
+    position: relative;
+}
+
+.input{
+    width:100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+    color:white;
+    font-size: 16px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    padding-left: 10px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s;
+}
+
+.input-box .input:focus ~ label,
+.input-box .input:valid ~ label{
+    top: -1px;
+    left: 10px;
+    background: rgb(190, 177, 246);
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px;
+}
+
+textarea.input{
+    padding: 10px;
+    resize: none;
+    min-height: 120px;
+    overflow: auto;
+}
+
+.btn{
+    position: relative;
+    top: 100px;
+    right:150px;
+    background:rgb(143, 118, 255) ;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+    width: 20%;
+    font-size: 14px;
+    color:white;
+    cursor: pointer;
+}
+
+footer {
+    background-color:#e4d0f4;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Satisfy", sans-serif;
+}
+
+body{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.img-div{
+    height:500px;
+    width:700px;
+    position: absolute;
+    right:1%;
+    top:20%;
+    background-image: url(online\ shopping.jpg);
+    animation: slider 20s linear;
+    background-repeat: no-repeat;
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header{
+    position: relative;
+    top:0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header p{
+    color: rgb(192, 36, 36);
+    font-size: 20px;
+}
+
+.nav a{
+    position: relative;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(229, 53, 53);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 120px ;
+}
+
+.nav a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left:0;
+    width: 0;
+    height: 2px;
+    background:rgb(229, 53, 53);
+    transition:0.3s ;
+}
+
+.nav a:hover::before{
+    width: 100%;
+}
+
+
+
+header .logo{
+    text-decoration: none;
+    color: rgb(192, 36, 36);
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: 0.3s;
+    padding: 0%;
+}
+
+header .logo:hover{
+    letter-spacing: 10px;
+}
+
+.content{
+    max-width: 650px;
+    margin:30px 100px;
+}
+
+.content .info h2{
+    color: rgb(229, 53, 53);
+    font-size: 60px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+.content .info h2 span{
+    color: rgb(192, 36, 36);
+    font-weight: 900;
+}
+
+.content .info p, li{
+    color: rgb(192, 36, 36);
+    font-family: "Poppins", sans-serif;
+    text-shadow: 3px 3px 4px rgb(255, 199, 199);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.content .info p{
+    font-size: 23px;
+    font-weight: 500;
+}
+.content h4{
+    color: rgb(192, 36, 36);
+    font-size: 23px;
+    font-weight: 700;
+    text-shadow: 3px 3px 4px rgb(255, 199, 199);
+    margin: 15px 0 30px 0;
+}
+
+.content .info .sign-up, .member{
+    color: rgb(255, 199, 199);
+    background:rgb(229, 53, 53);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.content .info .sign-up:hover, .member:hover{
+    background: rgb(192, 36, 36);
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:440px 30px;
+}
+
+.icons a{
+    position: relative;
+    color: rgb(229, 53, 53);
+    font-size: 30px;
+    padding: 25px;
+}
+
+.icons a:hover{
+    transform: scale(1.25);
+}
+
+
+@keyframes slider{
+    0%{
+        background-image: url(online\ shopping.jpg);
+    }
+    12.5%{
+        background-image:url(white.jpg);
+    }
+    25%{
+        background-image: url(save\ money.jpg);
+    }
+    37.5%{
+        background-image:url(white.jpg);
+    }
+    50%{
+        background-image: url(fast\ delivery.jpg);
+    }
+    62.5%{
+        background-image:url(white.jpg);
+    }
+    75% {
+        background-image: url(quality\ assured\ -1.jpg);
+    }
+    87.5%{
+        background-image:url(white.jpg);
+    }
+}
+
+
+
